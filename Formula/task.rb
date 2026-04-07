@@ -1,21 +1,21 @@
 class Task < Formula
   desc "A command-line todo list manager"
   homepage "https://github.com/GuionAI/taskwarrior"
-  version "3.4.2-guion.10"
+  version "3.4.2-guion.11"
   license "MIT"
   conflicts_with "go-task", because: "both install a 'task' binary"
 
   on_macos do
     on_arm do
-      url "https://github.com/GuionAI/taskwarrior/releases/download/v3.4.2-guion.10/task-3.4.2-guion.10-aarch64-macos.tar.gz"
-      sha256 "eda77b645f6c948834e18f5085c444e2421c433debe742e6c5fc4c610b12d577"
+      url "https://github.com/GuionAI/taskwarrior/releases/download/v3.4.2-guion.11/task-3.4.2-guion.11-aarch64-macos.tar.gz"
+      sha256 "0ddc2c8c5b5a3c5f88464504dfcc9515f772d832834a2fc57261ae507d99c42b"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/GuionAI/taskwarrior/releases/download/v3.4.2-guion.10/task-3.4.2-guion.10-x86_64-linux.tar.gz"
-      sha256 "7135027ffcd973758a469931a58593ce2216fb7925366294e392faed67d4f3d3"
+      url "https://github.com/GuionAI/taskwarrior/releases/download/v3.4.2-guion.11/task-3.4.2-guion.11-x86_64-linux.tar.gz"
+      sha256 "d377963e301283e7486b4a7851654f22d897f00b7b1ecb1cb0fe5081262bc990"
     end
   end
 
