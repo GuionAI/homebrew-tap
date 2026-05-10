@@ -1,26 +1,19 @@
 class FlicknoteSync < Formula
   desc "Background sync daemon for FlickNote CLI"
   homepage "https://github.com/guionai/flicknote-cli"
-  version "0.1.5"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/guionai/flicknote-cli/releases/download/v0.1.5/flicknote-sync-aarch64-apple-darwin.tar.xz"
-      sha256 "ce910605b6505bd12e6ae9b22b72666423ed3c26e9ac566160628453b246488e"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/guionai/flicknote-cli/releases/download/v0.1.5/flicknote-sync-x86_64-apple-darwin.tar.xz"
-      sha256 "3dc813180b650e21e1472a736926d5b650f3c895d05026c8cd1ebe3c8c88e0e5"
-    end
+  version "0.1.6"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/guionai/flicknote-cli/releases/download/v0.1.6/flicknote-sync-aarch64-apple-darwin.tar.xz"
+    sha256 "086617aaac89039d8a14da5c74034971c0e799b158a0434c435ba498b78542b9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/guionai/flicknote-cli/releases/download/v0.1.5/flicknote-sync-x86_64-unknown-linux-musl.tar.xz"
-    sha256 "edd7c27a966c839b94a88201ce1df3a7814153d876f7c4e82edc2e6c4a5a83ee"
+    url "https://github.com/guionai/flicknote-cli/releases/download/v0.1.6/flicknote-sync-x86_64-unknown-linux-musl.tar.xz"
+    sha256 "3b2a9e87e1627a7bdbf38a47bfc244f8aed99297447bbfbeb50e11d507e1532d"
   end
   license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
-    "x86_64-apple-darwin":               {},
     "x86_64-unknown-linux-gnu":          {},
     "x86_64-unknown-linux-musl-dynamic": {},
     "x86_64-unknown-linux-musl-static":  {},
@@ -43,7 +36,6 @@ class FlicknoteSync < Formula
 
   def install
     bin.install "flicknote-sync" if OS.mac? && Hardware::CPU.arm?
-    bin.install "flicknote-sync" if OS.mac? && Hardware::CPU.intel?
     bin.install "flicknote-sync" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
