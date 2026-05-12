@@ -1,14 +1,14 @@
 class FlicknoteSync < Formula
   desc "Background sync daemon for FlickNote CLI"
   homepage "https://github.com/guionai/flicknote-cli"
-  version "0.1.6"
+  version "0.1.7"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/guionai/flicknote-cli/releases/download/v0.1.6/flicknote-sync-aarch64-apple-darwin.tar.xz"
-    sha256 "086617aaac89039d8a14da5c74034971c0e799b158a0434c435ba498b78542b9"
+    url "https://github.com/guionai/flicknote-cli/releases/download/v0.1.7/flicknote-sync-aarch64-apple-darwin.tar.xz"
+    sha256 "4723be96edde71fb97db21d6f0f6aac903118ba786872c3b5070e665f479558a"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/guionai/flicknote-cli/releases/download/v0.1.6/flicknote-sync-x86_64-unknown-linux-musl.tar.xz"
-    sha256 "3b2a9e87e1627a7bdbf38a47bfc244f8aed99297447bbfbeb50e11d507e1532d"
+    url "https://github.com/guionai/flicknote-cli/releases/download/v0.1.7/flicknote-sync-x86_64-unknown-linux-musl.tar.xz"
+    sha256 "1754f35cbff90a627452f9a320e82bba0ce533ca4b791aab063e67f38322735b"
   end
   license "MIT"
 
