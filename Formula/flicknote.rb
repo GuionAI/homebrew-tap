@@ -1,14 +1,14 @@
 class Flicknote < Formula
   desc "Local-first note management CLI with cloud sync"
   homepage "https://github.com/guionai/flicknote-cli"
-  version "0.2.8"
+  version "0.2.9"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/guionai/flicknote-cli/releases/download/v0.2.8/flicknote-cli-aarch64-apple-darwin.tar.xz"
-    sha256 "c8bc167774f859a6950948d39673ab86d10030f5f278be03c7f60a3844f93078"
+    url "https://github.com/guionai/flicknote-cli/releases/download/v0.2.9/flicknote-cli-aarch64-apple-darwin.tar.xz"
+    sha256 "9e370a971a3f23839e066571cfe9c0b6dc903268ec8f1d89678859d049889cde"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/guionai/flicknote-cli/releases/download/v0.2.8/flicknote-cli-x86_64-unknown-linux-musl.tar.xz"
-    sha256 "8f2b87b167bbda7c1d598010c2f7209e6a5665a6358e736b5e5b5dbd7c9fe805"
+    url "https://github.com/guionai/flicknote-cli/releases/download/v0.2.9/flicknote-cli-x86_64-unknown-linux-musl.tar.xz"
+    sha256 "6f050414faaa5bc0f44df0f4e40d09def800725c3e43c9f5a6d0bf6204bb8619"
   end
   license "MIT"
 
