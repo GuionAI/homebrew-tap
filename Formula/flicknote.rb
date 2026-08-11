@@ -1,14 +1,14 @@
 class Flicknote < Formula
   desc "Local-first note management CLI with cloud sync"
   homepage "https://github.com/guionai/flicknote-cli"
-  version "0.5.0"
+  version "0.5.1"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/guionai/flicknote-cli/releases/download/v0.5.0/flicknote-cli-aarch64-apple-darwin.tar.xz"
-    sha256 "604705ca2c3d6566e51f5175b13ff6baee26e9c0993b637dc79dce9709def369"
+    url "https://github.com/guionai/flicknote-cli/releases/download/v0.5.1/flicknote-cli-aarch64-apple-darwin.tar.xz"
+    sha256 "28c925166a4e7f6853923b8c7af35f2906151555fbf6977024ec5f7f6995dd79"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/guionai/flicknote-cli/releases/download/v0.5.0/flicknote-cli-x86_64-unknown-linux-musl.tar.xz"
-    sha256 "7086d247653b53857dcc2bcfb5781ee6059ddc64c62256f085a54a1cb0aa68c6"
+    url "https://github.com/guionai/flicknote-cli/releases/download/v0.5.1/flicknote-cli-x86_64-unknown-linux-musl.tar.xz"
+    sha256 "66e365e31d0b661770541b7b07f5dbcf901ed3a62d49681dee72f2495e6b2518"
   end
   license "MIT"
 
@@ -35,8 +35,12 @@ class Flicknote < Formula
   end
 
   def install
-    bin.install "flicknote", "flicknote-sync" if OS.mac? && Hardware::CPU.arm?
-    bin.install "flicknote", "flicknote-sync" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "flicknote", "flicknote-sync"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "flicknote", "flicknote-sync"
+    end
 
     install_binary_aliases!
 
