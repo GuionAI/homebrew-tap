@@ -1,16 +1,17 @@
 class Flicknote < Formula
   desc "Local-first note management CLI with cloud sync"
   homepage "https://github.com/guionai/flicknote-cli"
-  version "1.5.0"
+  version "1.6.0"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/guionai/flicknote-cli/releases/download/v1.5.0/flicknote-cli-aarch64-apple-darwin.tar.xz"
-    sha256 "42d63bfdcef90f889a82001134e5c49a4d57e6358f438e2e7b6ccb07426087b3"
+    url "https://github.com/guionai/flicknote-cli/releases/download/v1.6.0/flicknote-cli-aarch64-apple-darwin.tar.xz"
+    sha256 "53f9d70bd15a6392d1c623dd7eb3afb1928b9d299c97b00399d3772b69045c4e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/guionai/flicknote-cli/releases/download/v1.5.0/flicknote-cli-x86_64-unknown-linux-musl.tar.xz"
-    sha256 "fa77d4854c7de3ff9dcaed652378442655d5a831ddf5b14e650099f9225bb7f7"
+    url "https://github.com/guionai/flicknote-cli/releases/download/v1.6.0/flicknote-cli-x86_64-unknown-linux-musl.tar.xz"
+    sha256 "fb6300aa1eae3bbac3bd77adf5ba9bc52e6a307acde2f6832b6ee93dc25919b5"
   end
   license "MIT"
+  depends_on "meilisearch"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
